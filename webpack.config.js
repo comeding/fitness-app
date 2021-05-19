@@ -26,13 +26,14 @@ module.exports = {
         // 三方插件
         swiper:'./src/lib/swiper/swiper-bundle.js',
         captcha:'./src/lib/captcha-mini.js',
-
+        weui:'./src/lib/weui/weui.js',
 
         home:'./src/js/home.js',  
         login:'./src/js/login.js',  
         register:'./src/js/register.js', 
         poster:'./src/js/poster.js',
-        about:'./src/js/about.js'
+        about:'./src/js/about.js',
+        edit:'./src/js/edit.js',
     },
 
     //出口
@@ -118,6 +119,11 @@ module.exports = {
             filename:'about.html',
             chunks:['about','common','dom','http','utils']      
         }),
+        new HtmlWebpackPlugin({   
+            template: './src/page/edit.html',       
+            filename:'edit.html',
+            chunks:['edit','common','dom','http','utils','weui']      
+        }),
 
         //提取js中的css代码
         new MiniCssExtractPlugin({
@@ -142,7 +148,7 @@ module.exports = {
         port: 8086, 
         open: true, 
         publicPath: '/', 
-        openPage: 'home.html', 
+        openPage: 'poster.html', 
     },
     target: 'web', 
 }

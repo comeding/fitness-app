@@ -19,14 +19,22 @@ body{
         display: flex;
         align-items: center;
         .head{
+            position: relative;
             width: 120px;
             height: 120px;
             border-radius: 60px;
             border: 3px solid rgba(66, 148, 255, 100);
             margin-left: 10px;
             position: relative;
-            background: url('../img/1.jpg');
-            background-size: 100%;
+          
+             img{
+                 border-radius: 50%;
+                 width: 100%;
+                 position: absolute;
+                 top: 0%;
+                 left: 0%;
+             }
+            
         }
         img{
             position: absolute;
@@ -37,15 +45,24 @@ body{
             color: rgba(16, 16, 16, 100);
             font-size: 22px;
             margin-left: 10px;
+            text-overflow:ellipsis;
+            overflow:hidden;
+            white-space:nowrap;
         }
     }
     p{
-        width: 100%;
+        color: #000;
+        width: 90%;
+      
         height: 23%;
         line-height: 10%;
         line-height: 217%;
         text-indent: 1em;
         color: #8a8a8a;
+        text-overflow:ellipsis;
+        overflow:hidden;
+        white-space:nowrap;
+     
     }
 }
 
@@ -164,4 +181,9 @@ body{
     line-height:313% ;
     color: #4294FF ;
     font-size: 18px;
+}
+
+
+.file{
+    display: none;
 }
