@@ -1,6 +1,10 @@
 /**
  * 工具函数
  */
+
+
+
+
 const utils={};
 // 手机号验证
 utils.testTall=function(res){
@@ -24,7 +28,8 @@ utils.toast = function(status, msg){
 toast.className = 'toast';
 let html = `
     <p class="toast-icon">
-        √
+    <i class="iconfont icondui"></i>
+
     </p>
     <p class="toast-text">${msg}</p>
 `
@@ -49,7 +54,7 @@ utils.toast1 = function(status, msg){
 toast.className = 'toast';
 let html = `
     <p class="toast-icon">
-        x
+    <i class="iconfont iconcuo"></i>
     </p>
     <p class="toast-text">${msg}</p>
 `
@@ -98,6 +103,29 @@ utils.addFooter = function(page) {
 }
 
 
+
+
+
+
+
+/**
+ * @stringToObj
+ * @str  string  ?id=5&name=张三 
+ *@return  Object   {id:5,name:'张三'}
+ */
+ utils.stringToObj = function(str) {
+    str = str.substr(1);
+    //id=5&name=张三
+    let arr = str.split('&');
+    // ["id=5", "name=zhangsan"]
+    //返回的对象
+    let obj = {};
+    arr.forEach(function(item) {
+        let arr1 = item.split('=');
+        obj[arr1[0]] = arr1[1]
+    })
+    return obj;
+}
 
 
 

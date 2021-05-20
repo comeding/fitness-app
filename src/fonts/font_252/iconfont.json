@@ -1,0 +1,58 @@
+{
+  "id": "2520558",
+  "name": "0228h5",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1400849",
+      "name": "对",
+      "font_class": "dui",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "5287658",
+      "name": "错",
+      "font_class": "cuo",
+      "unicode": "e646",
+      "unicode_decimal": 58950
+    },
+    {
+      "icon_id": "14046406",
+      "name": "对",
+      "font_class": "chenggong",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "1440919",
+      "name": "微信 ",
+      "font_class": "weixin",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "20574674",
+      "name": "玫瑰",
+      "font_class": "meigui",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "572534",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "4143524",
+      "name": "返回",
+      "font_class": "fanhui",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    }
+  ]
+}

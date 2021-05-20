@@ -34,6 +34,9 @@ module.exports = {
         poster:'./src/js/poster.js',
         about:'./src/js/about.js',
         edit:'./src/js/edit.js',
+        sports:'./src/js/sports.js',
+        sportsDetail:'./src/js/sports-detail.js',
+        player:'./src/js/player.js'
     },
 
     //出口
@@ -124,6 +127,23 @@ module.exports = {
             filename:'edit.html',
             chunks:['edit','common','dom','http','utils','weui']      
         }),
+        new HtmlWebpackPlugin({   
+            template: './src/page/sports.html',       
+            filename:'sports.html',
+            chunks:['sports','common','dom','http','utils','weui']      
+        }),
+        new HtmlWebpackPlugin({   
+            template: './src/page/sports-detail.html',       
+            filename:'sports-detail.html',
+            chunks:['sportsDetail','common','dom','http','utils','weui']      
+        }),
+        new HtmlWebpackPlugin({   
+            template: './src/page/player.html',       
+            filename:'player.html',
+            chunks:['player','common','dom','http','utils','weui']      
+        }),
+     
+    
 
         //提取js中的css代码
         new MiniCssExtractPlugin({
@@ -145,7 +165,7 @@ module.exports = {
     devServer: {
         contentBase: path.resolve(__dirname, 'dist'), 
         compress: true, 
-        port: 8086, 
+        port: 8085, 
         open: true, 
         publicPath: '/', 
         openPage: 'poster.html', 
