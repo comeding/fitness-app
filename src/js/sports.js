@@ -16,17 +16,13 @@ document.ready(function() {
 
     //请求用户的课程列表
     $http.get('/sports/courseList?id=' + user.userId, function(res) {
-        // console.log(res);
         //处理数据渲染页面
         let dataArr = res.data;
         //获取最新课程
         let newData = dataArr.find(function(item) {
                 return item.latest === 1
             })
-            //渲染最新课程
-            // newImgDom.src = baseUrl + newData.imgurl;
-            // newTitleDom.textContent = newData.name;
-            // newTextDom.textContent = newData.desc;
+         
         let newhtml = `
                <a href="./sports-detail.html?id=${newData.courseId}">
                 <div class="new">
@@ -49,7 +45,7 @@ document.ready(function() {
 
         //渲染 课程列表
 
-        console.log(dataArr);
+        
 
         let html = '';
         dataArr.forEach(function(item) {

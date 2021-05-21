@@ -9,11 +9,20 @@ document.ready(function(){
 
     let back =document.querySelector('#back');
     let next =document.querySelector('#next');
-    let progress =document.querySelector('.progress')
+    let progress =document.querySelector('.progress');
+
+    let stopDom =document.querySelector('#stop');
+    let modalDom =document.querySelector('.modal');
+    let imgbox =document.querySelector('.imgbox');
+    let span =document.querySelector('.box-bottom span');
+
+    let playDom =document.querySelector('.play');
+    let endDom =document.querySelector('.end');
+
     // videoList 获取本地视频
 let videoList =JSON.parse(localStorage.getItem('videoList'));
 // console.log(videoList );
-    let index =2;
+    let index =0;
     // 播放
     function play(){
         // 渲染页面进度
@@ -71,5 +80,30 @@ let videoList =JSON.parse(localStorage.getItem('videoList'));
             let num = width * (current /total);
             progress.style.width = num + 'px'
         },30)
+
+
+        // 暂停功能
+        stopDom.addEventListener('click',function(ev){
+            // 暂止播放
+            videoPlayerDom.pause();
+            // 渲染页面
+            imgbox.src =url+videoList[index].imgUrl;
+            span.textContent =videoList[index].title
+
+            // 显示蒙层
+            modalDom.style.display='block';
+
+        })
+        // 继续播放
+        playDom.addEventListener('click',function(ev){
+            // 继续播放
+            videoPlayerDom.play();
+            // 隐藏蒙层
+            modalDom.style.display='none';
+        })
+        // 退出训练
+        endDom.addEventListener('click',function(ev){
+            location.href='./sports.html'
+        })
 
 })
