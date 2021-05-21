@@ -13,10 +13,15 @@ document.ready(function(){
     let calorie =document.querySelector('.right span');
     let uerName =document.querySelector('.uer-name');
     let logOut =document.querySelector('.log-out');
-    let file =document.querySelector('.file')
+    let file =document.querySelector('.file');
+    let data =document.querySelector('.data');
+ 
 
       // 获取本地 localStorage
       let user = JSON.parse(localStorage.getItem('user'));
+      data.addEventListener('click',function(){
+          location.href ='./data.html'
+      })
       
   
   // 请求最新的用户数据渲染页面
@@ -54,14 +59,14 @@ document.ready(function(){
 
        // 个人信息设置跳转
     uerName.addEventListener('click',function(){
-        location.href='../edit.html';
+        location.href='./edit.html';
     })
     // 退出登录
     logOut.addEventListener('click',function(event){
           // 删除uers
           localStorage.removeItem('user');
           // 跳转到登录页
-          location.href='../login.html'
+          location.href='./login.html'
     })
   
  //更新后端数据-头像
@@ -83,7 +88,7 @@ document.ready(function(){
 // 接口请求最新的用户数据
 function getUserInfo() {
     $http.get('/users/accountinfo?userId=' + user.userId, function(res) {
-        console.log(res);
+        // console.log(res);
         localStorage.setItem('user', JSON.stringify(res.data));
 
         if (res.data.imgurl) {

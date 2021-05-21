@@ -31,7 +31,7 @@ btn.addEventListener('click',function(){
         let user = res.data.user;
         localStorage.setItem('user', JSON.stringify(user));
         setTimeout(function(){
-            location.href='../home.html'
+            location.href='./home.html'
         },2000)
 
     })

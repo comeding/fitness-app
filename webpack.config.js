@@ -36,7 +36,8 @@ module.exports = {
         edit:'./src/js/edit.js',
         sports:'./src/js/sports.js',
         sportsDetail:'./src/js/sports-detail.js',
-        player:'./src/js/player.js'
+        player:'./src/js/player.js',
+        data:'./src/js/data.js'
     },
 
     //出口
@@ -142,6 +143,11 @@ module.exports = {
             filename:'player.html',
             chunks:['player','common','dom','http','utils','weui']      
         }),
+        new HtmlWebpackPlugin({   
+            template: './src/page/data.html',       
+            filename:'data.html',
+            chunks:['data','common','dom','http','utils','weui']      
+        }),
      
     
 
@@ -158,7 +164,7 @@ module.exports = {
     ],
 
     //环境 
-    mode: process.env.NODE_ENV,
+    mode: 'development',
 
     //热更新 本地服务启动
    

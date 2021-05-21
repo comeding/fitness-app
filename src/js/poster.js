@@ -7,9 +7,9 @@ btn.addEventListener('click',function(){
     // 如果有用户，跳转到首页
     // 没有用户，跳转到登录页
     if(localStorage.getItem('user')){
-        location.href='../home.html'
+        location.href='./home.html'
     }else{
-        location.href='../login.html'
+        location.href='./login.html'
     }
 })
 
@@ -21,9 +21,9 @@ let timeId =setInterval(function(){
     if(index<=0){
         clearInterval(timeId);
         if(localStorage.getItem('user')){
-            location.href='../home.html'
+            location.href='./home.html'
         }else{
-            location.href='../login.html'
+            location.href='./login.html'
         }
       
     }

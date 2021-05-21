@@ -74,7 +74,7 @@ document.ready(function(){
                 console.log(res1);
                 localStorage.setItem('user',JSON.stringify(res1.data.user));
                 setTimeout(function(){
-                    location.href='../home.html'
+                    location.href='./home.html'
                 },2000)
             })
         }else{
