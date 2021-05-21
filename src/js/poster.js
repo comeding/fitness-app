@@ -11,12 +11,8 @@ btn.addEventListener('click',function(){
     }else{
         location.href='../login.html'
     }
-
-
-
-    // location.href='../home.html'
 })
-// console.log(num.textContent);
+
 // 开启计时器
 let index = 5;
 let timeId =setInterval(function(){
@@ -29,6 +25,6 @@ let timeId =setInterval(function(){
         }else{
             location.href='../login.html'
         }
-        // location.href='./home.html'
+      
     }
 },1000) 
