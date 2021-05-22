@@ -45,6 +45,7 @@ document.ready(function(){
      file.addEventListener('change',function(){
         // 请求接口
         $updateFile('/users/upload','imgurl',this.files[0],function(res){
+            
             // 渲染页面
             img.src =url+res.data;
              // url拼接
